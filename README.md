@@ -14,8 +14,7 @@ A simple yet efficient HTTP load balancer written in Go, designed to distribute 
 ---
 
 ## Prerequisites
-- Go 1.20+ ([Install Guide](https://go.dev/doc/install))
-- Basic understanding of Go and HTTP.
+- Go 1.23.2 or later
 
 ---
 
@@ -64,4 +63,27 @@ servers: List of backend server URLs.
    go run main.go
    ```
 
+---
 
+## Running the Backend Servers
+For the load balancer to work properly, you need to run at least one backend server. We provide two sample implementations:
+
+### Option 1: Go Web Application
+1. Navigate to project directory
+2. Run with command:
+```bash
+go run main.go [PORT] "[SERVER_NAME]"
+```
+
+### Option 2: Java Web Application
+1. Navigate to project directory
+2. Ensure you have Java JRE installed
+3. Run with command:
+```bash
+java -jar .\out\artifacts\simpleWebApp_jar\simpleWebApp.jar [PORT] "[SERVER_NAME]"
+```
+
+## Important Notes:
+1. The load balancer will automatically detect healthy servers
+2. If no servers are running, you'll see the 503 error page
+3. You can mix Go and Java servers in your configuration
