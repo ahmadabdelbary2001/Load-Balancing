@@ -1,0 +1,9 @@
+{
+    "listenPort": ":9090",
+    "healthCheckInterval": "5s",
+    "servers": [
+        "http://localhost:9091",
+        "http://localhost:9092",
+        "http://localhost:9093"
+    ]
+}
