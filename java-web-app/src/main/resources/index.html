@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Distributed Search</title>
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+          background: linear-gradient(135deg, #2193b0, #6dd5ed);
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh;
+        }
+        .container {
+          background: #ffffff;
+          padding: 50px 30px;
+          border-radius: 12px;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+          text-align: center;
+          max-width: 500px;
+          width: 90%;
+          animation: slideUp 1s ease-in-out;
+        }
+        @keyframes slideUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+          margin: 10px 0;
+          font-weight: 700;
+        }
+        .welcome-title {
+          color: #007bff;
+          font-size: 38px;
+        }
+        .server-name {
+          color: #00b4ff;
+          font-size: 38px;
+          font-style: italic;
+        }
+
+        @media (max-width: 480px) {
+          .container {
+            padding: 40px 20px;
+          }
+          .welcome-title,
+          .server-name {
+            font-size: 32px;
+          }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="welcome-title">Welcome to</h1>
+    <h1 class="server-name">{{.ServerName}}</h1>
+</div>
+</body>
+</html>
