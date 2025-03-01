@@ -35,9 +35,33 @@ go-load-balancing/
 
 ---
 
+## Configuration
+Modify config.json to customize the load balancer:
+```
+{
+    "listenPort": ":9090",
+    "healthCheckInterval": "5s",
+    "servers": [
+        "http://localhost:9091",
+        "http://localhost:9092",
+        "http://localhost:9093"
+    ]
+}
+```
+listenPort: Port for the load balancer (e.g., :9090).
+healthCheckInterval: Frequency of health checks (e.g., 5s).
+servers: List of backend server URLs.
+
 ## Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/ahmadabdelbary2001/Load-Balancing.git
    cd Load-Balancing/go-load-balancing
    ```
+
+2. Build and run:
+   ```bash
+   go run main.go
+   ```
+
+
